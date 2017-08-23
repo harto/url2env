@@ -1,9 +1,15 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
+from os import popen
 from setuptools import setup, find_packages
+import re
 
 package = 'url2env'
-version = '1.1'
+
+version = popen('git describe --tags').read().strip()
+if not re.match(r'^\d+\.\d+(\.\d+)?$', version):
+    raise Exception('unexpected version: %s' % version)
+
 with open('README.rst') as f:
     long_description = f.read()
 

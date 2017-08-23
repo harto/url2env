@@ -28,9 +28,7 @@ Installation instructions
 Distribution instructions
 -------------------------
 
-(For my reference)::
+::
 
-    $ virtualenv env
-    $ env/bin/python setup.py bdist_wheel
-    $ env/bin/pip install twine
-    $ env/bin/twine upload dist/*
+    $ git tag <x.y>
+    $ make dist upload
