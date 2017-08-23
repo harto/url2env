@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """
 Transforms Heroku-style database URLs into shell environment variables.
@@ -6,7 +6,10 @@ Transforms Heroku-style database URLs into shell environment variables.
 
 from os.path import basename
 from sys import argv
-from urllib.parse import urlparse
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    from urlparse import urlparse
 
 def psql_envs(conn):
     env_map = {'user': 'PGUSER',

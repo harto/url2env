@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 package = 'url2env'
-version = '1.0'
+version = '1.1'
 with open('README.rst') as f:
     long_description = f.read()
 

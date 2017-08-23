@@ -21,8 +21,6 @@ The output could be used in conjunction with `env`, e.g.::
 Installation instructions
 -------------------------
 
-Note: requires Python 3.
-
 ::
 
     $ pip install url2env
